@@ -4,7 +4,7 @@
 **Tank-vs-Zombie-2.0**
 
 ## Game Description 
-*Tank-vs-Zombie-2.0* is a 2D top-down survival shooter game where players control a tank battling endless waves of zombies across multiple unique maps. The gameplay is inspired by popular mobile survival games like *Survivor.io*, but with a twist — you're piloting a tank through dangerous zombie-infested zones.
+*Tank-vs-Zombie-2.0* is a 3D top-down survival shooter game where players control a tank battling endless waves of zombies across multiple unique maps. The gameplay is inspired by popular mobile survival games like *Survivor.io*, but with a twist — you're piloting a tank through dangerous zombie-infested zones.
 
 Each level features different terrain, enemy types, and survival challenges. The player must navigate maps, eliminate zombies using their tank's turret, and avoid damage while collecting power-ups. Later maps introduce harder waves, mini-bosses, and more intense survival mechanics. The final goal is to defeat the boss in the ShadowRealm map and survive all waves.
 
