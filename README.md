@@ -55,6 +55,4 @@ Next tasks:
 
 ---
 
-### Need Help?
-I’m working solo, so some areas like balancing enemy waves, implementing advanced UI effects, or performance testing across platforms may need extra attention near the end. I'd appreciate feedback or suggestions from the TA during review!
 
