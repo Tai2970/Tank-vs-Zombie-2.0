@@ -8,10 +8,10 @@ public class SurvivalManager : MonoBehaviour
     [Header("Spawner Settings")]
     public SpawnerType spawnerType = SpawnerType.AutoDetect;
 
-    [Header("Timer Settings")]
-    public float survivalTime = 300f; // 5 minutes (final gameplay duration)
+    [Header("UI Settings")]
     public Text timerText;
 
+    private float survivalTime = 300f; // ⏱ Fixed 5 minutes
     private bool timeUp = false;
     private bool playerDead = false;
 
@@ -24,11 +24,12 @@ public class SurvivalManager : MonoBehaviour
         FindEnemySpawner();
         FindGameOverCanvas();
         victoryBoard = Object.FindFirstObjectByType<VictoryBoard>();
+        UpdateTimerDisplay();
     }
 
     void Update()
     {
-        if (playerDead || timeUp) return;
+        if (playerDead || timeUp || Time.timeScale == 0f) return;
 
         survivalTime -= Time.deltaTime;
         UpdateTimerDisplay();
@@ -63,12 +64,10 @@ public class SurvivalManager : MonoBehaviour
 
     public void OnPlayerDeath()
     {
-        // Confirm all players are dead before showing Game Over
         bool player1Alive = GameObject.FindWithTag("Player")?.activeInHierarchy == true;
         bool player2Alive = GameObject.FindWithTag("Player2")?.activeInHierarchy == true;
-        bool aiAlive = GameObject.FindWithTag("AI")?.activeInHierarchy == true;
 
-        if (player1Alive || player2Alive || aiAlive)
+        if (player1Alive || player2Alive)
             return;
 
         playerDead = true;
@@ -81,7 +80,6 @@ public class SurvivalManager : MonoBehaviour
         if (gameOverCanvas != null)
         {
             gameOverCanvas.SetActive(true);
-
             GameResultSoundManager soundManager = gameOverCanvas.GetComponent<GameResultSoundManager>();
             if (soundManager != null)
                 soundManager.PlayResultSound();
