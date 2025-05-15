@@ -18,7 +18,7 @@
   - Maintenance Scene (End Screen)
 
 - **Core Gameplay**
-  - Survive for 5 minutes or meet map-specific goals
+  - Survive for 3 minutes or meet map-specific goals
   - One-hit death or health-based survival (map-dependent)
   - Enemy spawners, smart tracking, and shooting AI
   - Victory and Game Over screens
