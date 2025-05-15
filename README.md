@@ -1,88 +1,111 @@
 # Tank vs Zombie 2.0
 
-**Tank vs Zombie 2.0** is a top-down survival game built in Unity. Players must navigate hostile zones filled with ghosts, enemy tanks, and special threats across multiple maps. This game was created as the final project for our game development course.
+**Tank vs Zombie 2.0** is a top-down survival game built in Unity. Players must survive across enemy-infested maps, battling ghosts, enemy tanks, and special threats. Developed as the final project for our game development course.
 
 ---
 
 ## 🎮 Game Features
 
-- **Multiplayer Modes**
-  - Solo Mode (Player 1 only)
-  - Co-op Mode (Player 1 + Player 2)
-  - Player + Server AI (autonomous support tank)
+- **Multiple Modes**
+  - Solo Player
+  - Two-Player Co-op
+  - Player + Server AI support tank
 
-- **Survival Mechanics**
-  - Each map has its own win condition (time survival, kill count, etc.)
-  - One-hit death or life points depending on the map
-  - Unique level goals and difficulty scaling
+- **Map-Based Progression**
+  - Ghost Valley
+  - Crimson Arsenal
+  - Steel Undead
+  - Maintenance Scene (End Screen)
 
-- **Maps & Progression**
-  - **Ghost Valley** – survive and destroy ghosts
-  - **Crimson Arsenal** – face tank ambushes with limited health
-  - **Steel Undead** – final survival zone before Maintenance
-  - **Maintenance Scene** – transition scene with background sound
+- **Core Gameplay**
+  - Survive for 5 minutes or meet map-specific goals
+  - One-hit death or health-based survival (map-dependent)
+  - Enemy spawners, smart tracking, and shooting AI
+  - Victory and Game Over screens
 
-- **UI & Sound**
-  - Intro & transition boards
-  - Victory / Game Over screens
-  - Button and gameplay sound effects
-  - Background audio in Maintenance scene only
+- **Sound & UI**
+  - Button sounds and gameplay SFX
+  - Background music in Maintenance Scene only
+  - Floating score effects and animated transitions
 
 ---
 
 ## 🧪 Controls
 
-**Player 1:**
-- Move: `W` `A` `S` `D`
+**Player 1**
+- Move: `W`, `A`, `S`, `D`
 - Shoot: `Space`
 
-**Player 2:**
+**Player 2**
 - Move: `Arrow Keys`
 - Shoot: `K`
 
-**Server AI:**
-- Moves automatically
-- Shoots enemies on detection
+**Server AI**
+- Automatically follows players and shoots enemies
 
 ---
 
-## 🧩 How to Play
+## 🧩 Scene Flow (Build Order)
 
-1. Launch the game through the **Main Menu**
-2. Select a play mode (Solo, Co-op, or Server AI)
-3. Survive on each map by completing the conditions
-4. Watch for victory or game over transitions
-5. Reach the Maintenance screen to end the final stage
+> The game should be played **starting from the `MainMenu` scene**.  
+> **Do not run the `IntroSplash` scene manually** — it's only used at build startup.
+
+1. `IntroSplash` *(only shows when you build the game)*
+2. `MainMenu` *(main hub)*
+3. `Mode` *(select player mode)*
+4. `WaitScene` *(loading transition)*
+5. `GhostValley` *(map 1: destroy ghosts)*
+6. `WaitScene`
+7. `CrimsonArsenal` *(map 2: survive tank ambushes)*
+8. `WaitScene`
+9. `SteelUndead` *(map 3: final battle)*
+10. `WaitScene`
+11. `Maintenance` *(end screen with background audio)*
 
 ---
 
-## 🛠️ Project Structure
+## 🧪 How to Test the Game in Unity
+
+1. Open the project in **Unity 2022.3 LTS or newer**
+2. Open the scene named: `MainMenu` (`Assets/Scenes/MainMenu.unity`)
+3. Click the **Play button** in Unity Editor
+4. Choose a mode and play through maps
+
+✅ Do **not** run `IntroSplash` or `WaitScene` directly during testing — they are only for build transitions.
+
+---
+
+## 🛠️ How to Build the Game
+
+To create a playable version:
+
+1. In Unity, go to **File > Build Settings**
+2. Click **"Add Open Scenes"** to include all necessary scenes, or manually add them in order listed above
+3. Choose your target platform (e.g., Windows)
+4. Click **Build**
+5. The game will start at `IntroSplash` → then `MainMenu`
+
+---
+
+## 🧾 Project Folder Structure
 
 ```
 Assets/
-├── Scenes/              # Each game map and menu scene
-├── Scripts/             # Player, Enemy, UI, Spawner, Manager scripts
-├── Prefabs/             # Players, Enemies, Bullets, UI Prefabs
-├── Audio/               # Sound clips used in gameplay and UI
-└── UI/                  # Canvases, Buttons, Text, and FX
+├── Scenes/              # All game maps and menus
+├── Scripts/             # Player, enemy, UI, audio, spawner logic
+├── Prefabs/             # Tanks, bullets, ghosts, UI elements
+├── Audio/               # SFX and background sounds
+├── UI/                  # Canvas and animated overlays
 ```
-
----
-
-## 📁 Notes for Rebuilding
-
-- Built using **Unity 2022+**
-- Recommended to open via **Unity Hub**
-- Make sure to allow time for initial Unity re-import (Library folder excluded from Git)
 
 ---
 
 ## 👥 Team Members
 
-- **Tai Truong** (Project Lead, Programmer)
+- **Tai Truong** (Project Lead & Programmer)
 
 ---
 
 ## 📜 License
 
-Educational project submitted to SDSU for course credit. Not intended for commercial use.
+For educational use at SDSU. This game was developed as a final project and is not intended for commercial distribution.
