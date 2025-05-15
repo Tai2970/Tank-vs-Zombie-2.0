@@ -11,7 +11,7 @@ public class SurvivalManager : MonoBehaviour
     [Header("UI Settings")]
     public Text timerText;
 
-    private float survivalTime = 300f; // ⏱ Fixed 5 minutes
+    private float survivalTime = 180f; // ⏱ Fixed 3 minutes
     private bool timeUp = false;
     private bool playerDead = false;
 
