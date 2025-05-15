@@ -80,9 +80,6 @@ Assets/
 ## 👥 Team Members
 
 - **Tai Truong** (Project Lead, Programmer)
-- **James Johnson** (Designer, UI)
-- **Kyle Kucharski** (Data & Assets)
-- **Wissam Almasri** (Testing & Support)
 
 ---
 
