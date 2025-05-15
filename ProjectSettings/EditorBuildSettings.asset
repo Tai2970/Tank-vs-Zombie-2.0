@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/IntroSplash.unity
+    guid: af8d8b4dce514ac4fb7006f9c60a13c0
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ccf198606a978c84aa3726159e5586d8
+  - enabled: 1
+    path: Assets/Scenes/Mode.unity
+    guid: da4d5639279f22841b19e5c292772a0f
+  - enabled: 1
+    path: Assets/Scenes/WaitScene.unity
+    guid: 7c3f95a0d129ffd4ea016bb39fbb80fb
+  - enabled: 1
+    path: Assets/Scenes/GhostValley.unity
+    guid: 839a5da57a77e9d45898287295cb2670
+  - enabled: 1
+    path: Assets/Scenes/CrimsonArsenal.unity
+    guid: 5bae560447368564989be7a31b57b4ce
+  - enabled: 1
+    path: Assets/Scenes/SteelUndead.unity
+    guid: e33eb1fe9213d3349b922cb932d672fb
+  - enabled: 1
+    path: Assets/Scenes/Maintenance.unity
+    guid: ba6be4c8250f24344807cf1028fd1c15
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
+  m_UseUCBPForAssetBundles: 0
